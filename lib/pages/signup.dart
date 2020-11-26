@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:telalogin/screens/login.dart';
+import 'package:telalogin/pages/login.dart';
 
 //https://assets.materialup.com/uploads/e6018e43-e21f-4917-a6a1-4de8451a86d6/preview.png
 

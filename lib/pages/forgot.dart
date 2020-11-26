@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:telalogin/screens/login.dart';
+import 'package:telalogin/pages/login.dart';
 
 class ForgotPage extends StatelessWidget {
   @override

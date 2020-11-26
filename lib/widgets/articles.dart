@@ -8,7 +8,6 @@ class Articles extends StatelessWidget {
       itemCount: articlesList.length,
       itemBuilder: (context, index) => ListTile(
         title: Text(articlesList[index].title),
-        subtitle: Text(articlesList[index].subtitle),
         leading: articlesList[index].icon,
       ),
     );
