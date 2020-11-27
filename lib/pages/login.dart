@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:telalogin/pages/forgot.dart';
 import 'package:telalogin/pages/signup.dart';
-import '../screens/home_page.dart';
+import '../pages/home_page.dart';
 
 //https://assets.materialup.com/uploads/e6018e43-e21f-4917-a6a1-4de8451a86d6/preview.png
 
