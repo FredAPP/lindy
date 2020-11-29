@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:telalogin/pages/teste.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -9,10 +10,23 @@ class HomePage extends StatelessWidget {
         title: Text('Lindy App'),
       ),
       body: Center(
-        child: Container(
-          child: Image(
-            image: NetworkImage(
-                'https://image.shutterstock.com/image-vector/vertical-composition-three-couples-people-600w-1460029985.jpg'),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                child: Image(
+                  image: NetworkImage(
+                      'https://image.shutterstock.com/image-vector/vertical-composition-three-couples-people-600w-1460029985.jpg'),
+                ),
+              ),
+              FlatButton(
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Test(),
+                    ));
+                  },
+                  child: Text('Para Teste'))
+            ],
           ),
         ),
       ),
