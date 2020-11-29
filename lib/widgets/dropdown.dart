@@ -18,7 +18,6 @@ class _DropdownMenuState extends State<DropdownMenu> {
           title: Text('Dropdown Menu'),
         ),
         body: Column(children: [
-          //Text('FRED CHATO', style: TextStyle(fontSize: 100)),
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: DropdownButton(

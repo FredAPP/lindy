@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:telalogin/pages/teste.dart';
 
+import '../widgets/dropdown.dart';
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -20,12 +22,17 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               FlatButton(
-                  onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => Test(),
-                    ));
-                  },
-                  child: Text('Para Teste'))
+                color: Colors.blue,
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => DropdownMenu(),
+                  ));
+                },
+                child: Text(
+                  'Dropdown',
+                  style: TextStyle(color: Colors.white, fontSize: 26),
+                ),
+              ),
             ],
           ),
         ),
