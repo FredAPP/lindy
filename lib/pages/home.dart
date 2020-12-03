@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:telalogin/pages/teste.dart';
+import 'package:telalogin/widgets/dropdown.dart';
 
-import '../widgets/dropdown.dart';
-
-class HomePage extends StatelessWidget {
+class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Lindy App'),
+        title: Text('Articles'),
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -36,31 +34,6 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.menu_book),
-            label: 'Articles',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.directions_run),
-            label: 'Moves',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.playlist_play),
-            label: 'Playlists',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_today),
-            label: 'Events',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.supervisor_account_outlined),
-            label: 'About us',
-          ),
-        ],
       ),
     );
   }
