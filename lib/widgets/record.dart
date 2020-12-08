@@ -28,12 +28,7 @@ class _RecordState extends State<Record> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    var screenSize = MediaQuery.of(context).size;
-    var height = screenSize.height;
-    var width = screenSize.width;
     return Container(
-      height: height * 0.5,
-      width: width * 0.5,
       child: RotationTransition(
         turns: Tween(begin: 0.0, end: 1.0).animate(_controller),
         child: Image(image: AssetImage('assets/images/record.png')),

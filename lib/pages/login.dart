@@ -24,8 +24,8 @@ class LoginPage extends StatelessWidget {
                   end: Alignment.bottomRight,
                   stops: [0.4, 0.8],
                   colors: [
-                    Color.fromRGBO(201, 193, 144, 1),
-                    Color.fromRGBO(183, 173, 112, 1)
+                    Color.fromRGBO(210, 193, 144, 1),
+                    Color.fromRGBO(200, 173, 112, 1)
                   ],
                 ),
               )),
@@ -44,7 +44,7 @@ class LoginPage extends StatelessWidget {
                       child: Align(
                         alignment: Alignment.topLeft,
                         child: Text(
-                          'Welcome, hoppers!',
+                          'Welcome to Let\'s Lindy Hop!',
                           style: TextStyle(
                               fontSize: 25, fontWeight: FontWeight.bold),
                         ),
