@@ -21,7 +21,7 @@ class LoginPage extends StatelessWidget {
               children: [
                 Container(
                   child: Image(
-                      fit: BoxFit.fitHeight,
+                      fit: BoxFit.cover,
                       image: AssetImage('assets/images/background.jpeg')),
                   height: height,
                   width: width,
@@ -43,163 +43,174 @@ class LoginPage extends StatelessWidget {
                 ),
               ],
             ),
-            Container(
-              child: Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: 20,
-                ),
-                child: Column(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(top: 20),
-                      child: Align(
-                        alignment: Alignment.topLeft,
-                        child: Text(
-                          'Welcome to Lindy App!',
-                          style: TextStyle(
-                              color: Colors.deepPurple[700],
-                              fontSize: 25,
-                              fontWeight: FontWeight.bold),
-                        ),
+            SingleChildScrollView(
+              child: Column(
+                children: [
+                  Container(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 20,
                       ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(20),
-                      child: Record(),
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20)),
-                      padding: EdgeInsets.only(left: 15),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: 'Username',
-                          hintStyle:
-                              TextStyle(color: Colors.grey, fontSize: 16),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20)),
-                      padding: EdgeInsets.only(left: 20),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: 'Password',
-                          hintStyle:
-                              TextStyle(color: Colors.grey, fontSize: 16),
-                        ),
-                      ),
-                    ),
-                    Column(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                              color: Colors.deepPurple[700],
-                              borderRadius: BorderRadius.circular(20)),
-                          width: width * 0.3,
-                          margin: EdgeInsets.symmetric(vertical: 20),
-                          height: height * 0.05,
-                          child: FlatButton(
-                            onPressed: () {
-                              Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => NavigationController(),
-                              ));
-                            },
-                            child: Text(
-                              'Sign In',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 14),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(top: 30),
+                            child: Align(
+                              alignment: Alignment.topLeft,
+                              child: Text(
+                                'Welcome to Lindy App!',
+                                style: TextStyle(
+                                    color: Colors.deepPurple[700],
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.bold),
+                              ),
                             ),
                           ),
-                        ),
-                        Padding(
-                          padding:
-                              EdgeInsets.symmetric(horizontal: width * 0.05),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          Container(
+                            padding: EdgeInsets.all(20),
+                            child: Record(),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(20)),
+                            padding: EdgeInsets.only(left: 15),
+                            child: TextField(
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: 'Username',
+                                hintStyle:
+                                    TextStyle(color: Colors.grey, fontSize: 16),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(20)),
+                            padding: EdgeInsets.only(left: 20),
+                            child: TextField(
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: 'Password',
+                                hintStyle:
+                                    TextStyle(color: Colors.grey, fontSize: 16),
+                              ),
+                            ),
+                          ),
+                          Column(
                             children: [
-                              Align(
-                                alignment: Alignment.center,
+                              Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.deepPurple[700],
+                                    borderRadius: BorderRadius.circular(20)),
+                                width: width * 0.3,
+                                margin: EdgeInsets.symmetric(vertical: 20),
+                                height: height * 0.05,
                                 child: FlatButton(
                                   onPressed: () {
                                     Navigator.of(context)
                                         .push(MaterialPageRoute(
-                                      builder: (context) => ForgotPage(),
+                                      builder: (context) =>
+                                          NavigationController(),
                                     ));
                                   },
                                   child: Text(
-                                    'Forgot Password?',
+                                    'Sign In',
                                     style: TextStyle(
-                                        color: Colors.deepPurple[700],
-                                        fontSize: 14),
+                                        color: Colors.white, fontSize: 14),
                                   ),
                                 ),
                               ),
-                              Text('or login with'),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  GestureDetector(
-                                    onTap: () {},
-                                    child: CircleAvatar(
-                                      radius: 14,
-                                      child: Container(
-                                          width: 10,
-                                          child: Image(
-                                              fit: BoxFit.fitWidth,
-                                              image: AssetImage(
-                                                  'assets/icons/facebook.png'))),
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: width * 0.05),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Align(
+                                      alignment: Alignment.center,
+                                      child: FlatButton(
+                                        onPressed: () {
+                                          Navigator.of(context)
+                                              .push(MaterialPageRoute(
+                                            builder: (context) => ForgotPage(),
+                                          ));
+                                        },
+                                        child: Text(
+                                          'Forgot Password?',
+                                          style: TextStyle(
+                                              color: Colors.deepPurple[700],
+                                              fontSize: 14),
+                                        ),
+                                      ),
                                     ),
-                                  ),
-                                  SizedBox(
-                                    width: 20,
-                                  ),
-                                  GestureDetector(
-                                    onTap: () {},
-                                    child: CircleAvatar(
-                                      radius: 14,
-                                      backgroundColor: Colors.grey[50],
-                                      child: Image(
-                                          image: AssetImage(
-                                              'assets/icons/google.png')),
+                                    Text('or login with'),
+                                    SizedBox(
+                                      width: 20,
                                     ),
-                                  )
-                                ],
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        GestureDetector(
+                                          onTap: () {},
+                                          child: CircleAvatar(
+                                            radius: 14,
+                                            child: Container(
+                                                width: 10,
+                                                child: Image(
+                                                    fit: BoxFit.fitWidth,
+                                                    image: AssetImage(
+                                                        'assets/icons/facebook.png'))),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 20,
+                                        ),
+                                        GestureDetector(
+                                          onTap: () {},
+                                          child: CircleAvatar(
+                                            radius: 14,
+                                            backgroundColor: Colors.grey[50],
+                                            child: Image(
+                                                image: AssetImage(
+                                                    'assets/icons/google.png')),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ],
+                                ),
                               ),
                             ],
                           ),
-                        ),
-                      ],
+                          Column(
+                            children: [
+                              Text('Don\'t Have Account?',
+                                  style: TextStyle(fontSize: 20)),
+                              FlatButton(
+                                onPressed: () {
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                    builder: (context) => SignupPage(),
+                                  ));
+                                },
+                                child: Text('Sign Up',
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.deepPurple[700])),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
                     ),
-                    Column(
-                      children: [
-                        Text('Don\'t Have Account?',
-                            style: TextStyle(fontSize: 20)),
-                        FlatButton(
-                          onPressed: () {
-                            Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SignupPage(),
-                            ));
-                          },
-                          child: Text('Sign Up',
-                              style: TextStyle(
-                                  fontSize: 20, color: Colors.deepPurple[700])),
-                        ),
-                      ],
-                    )
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ],
