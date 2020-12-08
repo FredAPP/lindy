@@ -17,20 +17,31 @@ class LoginPage extends StatelessWidget {
         backgroundColor: Colors.grey[50],
         body: Stack(
           children: [
-            Container(
-              decoration: (BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  stops: [0.4, 0.8],
-                  colors: [
-                    Color.fromRGBO(210, 193, 144, 1),
-                    Color.fromRGBO(200, 173, 112, 1)
-                  ],
+            Stack(
+              children: [
+                Container(
+                  child: Image(
+                      fit: BoxFit.fitHeight,
+                      image: AssetImage('assets/images/background.jpeg')),
+                  height: height,
+                  width: width,
                 ),
-              )),
-              height: height,
-              width: width,
+                Container(
+                  height: height,
+                  width: width,
+                  decoration: (BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      stops: [0.4, 0.8],
+                      colors: [
+                        Color.fromRGBO(210, 193, 144, 0.8),
+                        Color.fromRGBO(200, 173, 112, 0.3)
+                      ],
+                    ),
+                  )),
+                ),
+              ],
             ),
             Container(
               child: Padding(
@@ -44,16 +55,18 @@ class LoginPage extends StatelessWidget {
                       child: Align(
                         alignment: Alignment.topLeft,
                         child: Text(
-                          'Welcome to Let\'s Lindy Hop!',
+                          'Welcome to Lindy App!',
                           style: TextStyle(
-                              fontSize: 25, fontWeight: FontWeight.bold),
+                              color: Colors.deepPurple[700],
+                              fontSize: 25,
+                              fontWeight: FontWeight.bold),
                         ),
                       ),
                     ),
                     Container(
-                        height: height * 0.4,
-                        width: width * 0.5,
-                        child: Record()),
+                      padding: EdgeInsets.all(20),
+                      child: Record(),
+                    ),
                     Container(
                       decoration: BoxDecoration(
                           color: Colors.white,
@@ -89,7 +102,7 @@ class LoginPage extends StatelessWidget {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                              color: Colors.blue,
+                              color: Colors.deepPurple[700],
                               borderRadius: BorderRadius.circular(20)),
                           width: width * 0.3,
                           margin: EdgeInsets.symmetric(vertical: 20),
@@ -125,7 +138,8 @@ class LoginPage extends StatelessWidget {
                                   child: Text(
                                     'Forgot Password?',
                                     style: TextStyle(
-                                        color: Colors.blue, fontSize: 14),
+                                        color: Colors.deepPurple[700],
+                                        fontSize: 14),
                                   ),
                                 ),
                               ),
@@ -179,8 +193,8 @@ class LoginPage extends StatelessWidget {
                             ));
                           },
                           child: Text('Sign Up',
-                              style:
-                                  TextStyle(fontSize: 20, color: Colors.blue)),
+                              style: TextStyle(
+                                  fontSize: 20, color: Colors.deepPurple[700])),
                         ),
                       ],
                     )
