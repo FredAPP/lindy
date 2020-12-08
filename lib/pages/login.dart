@@ -58,6 +58,7 @@ class LoginPage extends StatelessWidget {
                             child: Align(
                               alignment: Alignment.topLeft,
                               child: Text(
+                                /*to odiando como esse texto ta mas n consegui deixar mais bonito*/
                                 'Welcome to Lindy App!',
                                 style: TextStyle(
                                     color: Colors.deepPurple[700],
