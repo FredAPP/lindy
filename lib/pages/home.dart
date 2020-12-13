@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:telalogin/widgets/card_videos.dart';
 import 'package:telalogin/widgets/dropdown.dart';
 
 class Home extends StatelessWidget {
@@ -24,6 +25,18 @@ class Home extends StatelessWidget {
                 },
                 child: Text(
                   'Dropdown',
+                  style: TextStyle(color: Colors.white, fontSize: 26),
+                ),
+              ),
+              FlatButton(
+                color: Colors.blue,
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => CardVideos(),
+                  ));
+                },
+                child: Text(
+                  'card',
                   style: TextStyle(color: Colors.white, fontSize: 26),
                 ),
               ),
