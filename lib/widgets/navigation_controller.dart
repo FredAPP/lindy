@@ -39,23 +39,23 @@ class _NavigationControllerState extends State<NavigationController> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.menu),
-            title: Text('Articles'),
+            label: 'Articles',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.directions_run),
-            title: Text('Moves'),
+            label: 'Moves',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.playlist_play),
-            title: Text('Playlists'),
+            label: 'Playlists',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.calendar_today),
-            title: Text('Events'),
+            label: 'Events',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.supervisor_account),
-            title: Text('About us'),
+            label: 'About us',
           ),
         ],
       ),

@@ -115,12 +115,12 @@ class ForgotPage extends StatelessWidget {
                                   ));
                                 },
                                 child: Text(
-                                  'Sign In',
+                                  'Back to Login',
                                   style: TextStyle(
-                                      color: Colors.deepPurple[700], fontSize: 20),
+                                      color: Colors.deepPurple[700],
+                                      fontSize: 20),
                                 ),
                               ),
-                              Text('Back to Login'),
                             ],
                           ),
                         ],

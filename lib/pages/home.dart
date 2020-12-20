@@ -5,43 +5,89 @@ import 'package:telalogin/widgets/dropdown.dart';
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Container(
-                child: Image(
-                  image: NetworkImage(
-                      'https://image.shutterstock.com/image-vector/vertical-composition-three-couples-people-600w-1460029985.jpg'),
+    var screenSize = MediaQuery.of(context).size;
+    var height = screenSize.height;
+    var width = screenSize.width;
+    return SafeArea(
+      child: Scaffold(
+        body: Stack(
+          children: [
+            Stack(
+              children: [
+                Container(
+                  height: height,
+                  width: width,
+                  child: Image(
+                    image: AssetImage("assets/images/background.jpeg"),
+                    fit: BoxFit.cover,
+                  ),
                 ),
+                Container(
+                  height: height,
+                  width: width,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      stops: [
+                        0.4,
+                        0.8,
+                      ],
+                      colors: [
+                        Color.fromRGBO(210, 193, 144, 0.8),
+                        Color.fromRGBO(200, 173, 112, 0.3),
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                        color: Colors.deepPurple[700],
+                        borderRadius: BorderRadius.circular(20)),
+                    width: width * 0.6,
+                    margin: EdgeInsets.symmetric(vertical: 20),
+                    height: height * 0.07,
+                    child: FlatButton(
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => DropdownMenu(),
+                        ));
+                      },
+                      child: Text(
+                        'Dropdown',
+                        style: TextStyle(color: Colors.white, fontSize: 26),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                        color: Colors.deepPurple[700],
+                        borderRadius: BorderRadius.circular(20)),
+                    width: width * 0.6,
+                    margin: EdgeInsets.symmetric(vertical: 20),
+                    height: height * 0.07,
+                    child: FlatButton(
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => CardVideos(),
+                        ));
+                      },
+                      child: Text(
+                        'Video Cards',
+                        style: TextStyle(color: Colors.white, fontSize: 26),
+                      ),
+                    ),
+                  ),
+                ],
               ),
-              FlatButton(
-                color: Colors.blue,
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => DropdownMenu(),
-                  ));
-                },
-                child: Text(
-                  'Dropdown',
-                  style: TextStyle(color: Colors.white, fontSize: 26),
-                ),
-              ),
-              FlatButton(
-                color: Colors.blue,
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => CardVideos(),
-                  ));
-                },
-                child: Text(
-                  'card',
-                  style: TextStyle(color: Colors.white, fontSize: 26),
-                ),
-              ),
-            ],
-          ),
+            )
+          ],
         ),
       ),
     );
