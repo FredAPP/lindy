@@ -6,7 +6,14 @@ import '../widgets/navigation_controller.dart';
 
 //https://assets.materialup.com/uploads/e6018e43-e21f-4917-a6a1-4de8451a86d6/preview.png
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  bool isPasswordObscured = false;
+
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
@@ -94,7 +101,25 @@ class LoginPage extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(20)),
                             padding: EdgeInsets.only(left: 20),
                             child: TextField(
+                              autocorrect: false,
+                              enableSuggestions: false,
+                              obscureText: isPasswordObscured,
                               decoration: InputDecoration(
+                                suffixIcon: IconButton(
+                                  icon: Icon(
+                                    isPasswordObscured
+                                        ? Icons.visibility_off
+                                        : Icons.visibility,
+                                    color: isPasswordObscured
+                                        ? Colors.grey
+                                        : Colors.deepPurple[700],
+                                  ),
+                                  onPressed: () {
+                                    setState(() {
+                                      isPasswordObscured = !isPasswordObscured;
+                                    });
+                                  },
+                                ),
                                 border: InputBorder.none,
                                 hintText: 'Password',
                                 hintStyle:
