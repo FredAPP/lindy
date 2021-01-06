@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:telalogin/pages/forgot.dart';
 import 'package:telalogin/pages/signup.dart';
-import 'package:telalogin/widgets/record.dart';
 import '../widgets/navigation_controller.dart';
 
 //https://assets.materialup.com/uploads/e6018e43-e21f-4917-a6a1-4de8451a86d6/preview.png
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  bool isPasswordObscured = true;
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
@@ -17,31 +22,17 @@ class LoginPage extends StatelessWidget {
         backgroundColor: Colors.grey[50],
         body: Stack(
           children: [
-            Stack(
-              children: [
-                Container(
-                  child: Image(
-                      fit: BoxFit.cover,
-                      image: AssetImage('assets/images/background.jpeg')),
-                  height: height,
-                  width: width,
+            Container(
+              height: height,
+              width: width,
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(232, 213, 173, 1),
+                border: Border.all(
+                  color: Color.fromRGBO(60, 65, 133, 1),
+                  width: 10,
                 ),
-                Container(
-                  height: height,
-                  width: width,
-                  decoration: (BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      stops: [0.4, 0.8],
-                      colors: [
-                        Color.fromRGBO(210, 193, 144, 0.8),
-                        Color.fromRGBO(200, 173, 112, 0.3)
-                      ],
-                    ),
-                  )),
-                ),
-              ],
+                // borderRadius: BorderRadius.all(Radius.circular(5)),
+              ),
             ),
             SingleChildScrollView(
               child: Column(
@@ -54,34 +45,64 @@ class LoginPage extends StatelessWidget {
                       child: Column(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(top: 30),
+                            padding: EdgeInsets.only(
+                              top: 55,
+                              left: 10,
+                            ),
                             child: Align(
                               alignment: Alignment.topLeft,
                               child: Text(
                                 /*to odiando como esse texto ta mas n consegui deixar mais bonito*/
                                 'Welcome to Lindy App!',
                                 style: TextStyle(
-                                    color: Colors.deepPurple[700],
+                                    color: Color.fromRGBO(60, 65, 133, 1),
                                     fontSize: 25,
                                     fontWeight: FontWeight.bold),
                               ),
                             ),
                           ),
                           Container(
-                            padding: EdgeInsets.all(20),
-                            child: Record(),
+                            padding: EdgeInsets.all(40),
+                            child: Container(
+                              height: width * 0.4,
+                              width: width * 0.4,
+                              // color: Colors.black,
+                              foregroundDecoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Colors.black,
+                                  width: 57,
+                                ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(100)),
+                              ),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border.all(
+                                  color: Colors.white,
+                                  width: 100,
+                                ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(100)),
+                              ),
+                            ),
                           ),
                           Container(
+                            width: width * 0.8,
                             decoration: BoxDecoration(
                                 color: Colors.white,
+                                border: Border.all(
+                                  color: Color.fromRGBO(60, 65, 133, 1),
+                                  width: 1,
+                                ),
                                 borderRadius: BorderRadius.circular(20)),
                             padding: EdgeInsets.only(left: 15),
                             child: TextField(
                               decoration: InputDecoration(
                                 border: InputBorder.none,
                                 hintText: 'Email',
-                                hintStyle:
-                                    TextStyle(color: Colors.grey, fontSize: 16),
+                                hintStyle: TextStyle(
+                                    color: Color.fromRGBO(60, 65, 133, 0.6),
+                                    fontSize: 16),
                               ),
                             ),
                           ),
@@ -89,16 +110,34 @@ class LoginPage extends StatelessWidget {
                             height: 20,
                           ),
                           Container(
+                            width: width * 0.8,
                             decoration: BoxDecoration(
                                 color: Colors.white,
+                                border: Border.all(
+                                  color: Color.fromRGBO(60, 65, 133, 1),
+                                  width: 1,
+                                ),
                                 borderRadius: BorderRadius.circular(20)),
                             padding: EdgeInsets.only(left: 20),
                             child: TextField(
+                              obscureText: isPasswordObscured,
                               decoration: InputDecoration(
+                                suffixIcon: IconButton(
+                                    color: Color.fromRGBO(60, 65, 133, 0.6),
+                                    icon: Icon(isPasswordObscured
+                                        ? Icons.visibility
+                                        : Icons.visibility_off),
+                                    onPressed: () {
+                                      setState(() {
+                                        isPasswordObscured =
+                                            !isPasswordObscured;
+                                      });
+                                    }),
                                 border: InputBorder.none,
                                 hintText: 'Password',
-                                hintStyle:
-                                    TextStyle(color: Colors.grey, fontSize: 16),
+                                hintStyle: TextStyle(
+                                    color: Color.fromRGBO(60, 65, 133, 0.6),
+                                    fontSize: 16),
                               ),
                             ),
                           ),
