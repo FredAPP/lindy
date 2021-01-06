@@ -120,19 +120,25 @@ class _LoginPageState extends State<LoginPage> {
                                 borderRadius: BorderRadius.circular(20)),
                             padding: EdgeInsets.only(left: 20),
                             child: TextField(
+                              autocorrect: false,
+                              enableSuggestions: false,
                               obscureText: isPasswordObscured,
                               decoration: InputDecoration(
                                 suffixIcon: IconButton(
-                                    color: Color.fromRGBO(60, 65, 133, 0.6),
-                                    icon: Icon(isPasswordObscured
-                                        ? Icons.visibility
-                                        : Icons.visibility_off),
-                                    onPressed: () {
-                                      setState(() {
-                                        isPasswordObscured =
-                                            !isPasswordObscured;
-                                      });
-                                    }),
+                                  icon: Icon(
+                                    isPasswordObscured
+                                        ? Icons.visibility_off
+                                        : Icons.visibility,
+                                    color: isPasswordObscured
+                                        ? Colors.grey
+                                        : Colors.deepPurple[700],
+                                  ),
+                                  onPressed: () {
+                                    setState(() {
+                                      isPasswordObscured = !isPasswordObscured;
+                                    });
+                                  },
+                                ),
                                 border: InputBorder.none,
                                 hintText: 'Password',
                                 hintStyle: TextStyle(
