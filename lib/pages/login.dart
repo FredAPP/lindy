@@ -151,7 +151,7 @@ class _LoginPageState extends State<LoginPage> {
                             children: [
                               Container(
                                 decoration: BoxDecoration(
-                                    color: Colors.deepPurple[700],
+                                    color: Color.fromRGBO(60, 65, 133, 1),
                                     borderRadius: BorderRadius.circular(20)),
                                 width: width * 0.3,
                                 margin: EdgeInsets.symmetric(vertical: 20),
@@ -174,30 +174,53 @@ class _LoginPageState extends State<LoginPage> {
                               Padding(
                                 padding: EdgeInsets.symmetric(
                                     horizontal: width * 0.05),
-                                child: Row(
+                                child: Column(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Align(
                                       alignment: Alignment.center,
-                                      child: FlatButton(
-                                        onPressed: () {
-                                          Navigator.of(context)
-                                              .push(MaterialPageRoute(
-                                            builder: (context) => ForgotPage(),
-                                          ));
-                                        },
-                                        child: Text(
-                                          'Forgot Password?',
-                                          style: TextStyle(
-                                              color: Colors.deepPurple[700],
-                                              fontSize: 14),
-                                        ),
+                                      child: Column(
+                                        children: [
+                                          FlatButton(
+                                            onPressed: () {
+                                              Navigator.of(context)
+                                                  .push(MaterialPageRoute(
+                                                builder: (context) =>
+                                                    ForgotPage(),
+                                              ));
+                                            },
+                                            child: Text(
+                                              'Forgot Password?',
+                                              style: TextStyle(
+                                                  color: Color.fromRGBO(
+                                                      60, 65, 133, 1),
+                                                  fontSize: 14),
+                                            ),
+                                          ),
+                                          FlatButton(
+                                            onPressed: () {
+                                              Navigator.of(context)
+                                                  .push(MaterialPageRoute(
+                                                builder: (context) =>
+                                                    SignupPage(),
+                                              ));
+                                            },
+                                            child: Text(
+                                              'Sign Up',
+                                              style: TextStyle(
+                                                  color: Color.fromRGBO(
+                                                      60, 65, 133, 1),
+                                                  fontSize: 14),
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                     ),
                                     Text('or login with'),
                                     SizedBox(
                                       width: 20,
+                                      height: 15,
                                     ),
                                     Row(
                                       mainAxisAlignment:
@@ -235,23 +258,6 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                             ],
                           ),
-                          Column(
-                            children: [
-                              Text('Don\'t Have Account?',
-                                  style: TextStyle(fontSize: 20)),
-                              FlatButton(
-                                onPressed: () {
-                                  Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => SignupPage(),
-                                  ));
-                                },
-                                child: Text('Sign Up',
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        color: Colors.deepPurple[700])),
-                              ),
-                            ],
-                          )
                         ],
                       ),
                     ),
