@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:telalogin/pages/credits_page.dart';
-import 'package:telalogin/pages/events_page.dart';
-import 'package:telalogin/pages/home.dart';
-import 'package:telalogin/pages/moves_page.dart';
-import 'package:telalogin/pages/playlists_page.dart';
+import 'package:lindyapp/pages/credits_page.dart';
+import 'package:lindyapp/pages/events_page.dart';
+import 'package:lindyapp/pages/home.dart';
+import 'package:lindyapp/pages/moves_page.dart';
+import 'package:lindyapp/pages/playlists_page.dart';
 
 class NavigationController extends StatefulWidget {
   @override

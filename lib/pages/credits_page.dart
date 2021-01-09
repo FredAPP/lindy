@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:telalogin/widgets/record.dart';
 
 class CreditsPage extends StatelessWidget {
   @override
@@ -40,7 +39,6 @@ class CreditsPage extends StatelessWidget {
           Center(
             child: Column(children: [
               Center(
-                child: Record(),
                 heightFactor: height * 0.0025,
               ),
               Column(

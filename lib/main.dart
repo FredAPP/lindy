@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:telalogin/pages/login.dart';
+import 'package:lindyapp/pages/login.dart';
 
 void main() {
   runApp(MyApp());

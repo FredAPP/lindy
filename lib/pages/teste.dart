@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:telalogin/widgets/card_videos.dart';
+import 'package:lindyapp/widgets/card_videos.dart';
 
 class Test extends StatelessWidget {
   @override

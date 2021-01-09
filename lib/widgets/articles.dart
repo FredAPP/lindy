@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:telalogin/models/article_info.dart';
+import 'package:lindyapp/models/article_info.dart';
 
 class Articles extends StatelessWidget {
   @override
@@ -13,4 +13,3 @@ class Articles extends StatelessWidget {
     );
   }
 }
-
