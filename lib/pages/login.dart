@@ -52,7 +52,6 @@ class _LoginPageState extends State<LoginPage> {
                             child: Align(
                               alignment: Alignment.topLeft,
                               child: Text(
-                                /*to odiando como esse texto ta mas n consegui deixar mais bonito*/
                                 'Welcome to Lindy App!',
                                 style: TextStyle(
                                     color: Color.fromRGBO(60, 65, 133, 1),
@@ -154,7 +153,7 @@ class _LoginPageState extends State<LoginPage> {
                                     color: Color.fromRGBO(60, 65, 133, 1),
                                     borderRadius: BorderRadius.circular(20)),
                                 width: width * 0.3,
-                                margin: EdgeInsets.symmetric(vertical: 20),
+                                margin: EdgeInsets.only(top: 10),
                                 height: height * 0.05,
                                 child: FlatButton(
                                   onPressed: () {
@@ -182,42 +181,55 @@ class _LoginPageState extends State<LoginPage> {
                                       alignment: Alignment.center,
                                       child: Column(
                                         children: [
-                                          FlatButton(
-                                            onPressed: () {
-                                              Navigator.of(context)
-                                                  .push(MaterialPageRoute(
-                                                builder: (context) =>
-                                                    ForgotPage(),
-                                              ));
-                                            },
-                                            child: Text(
-                                              'Forgot Password?',
-                                              style: TextStyle(
-                                                  color: Color.fromRGBO(
-                                                      60, 65, 133, 1),
-                                                  fontSize: 14),
+                                          Container(
+                                            padding: EdgeInsets.symmetric(
+                                                vertical: 5),
+                                            child: InkWell(
+                                              onTap: () {
+                                                Navigator.of(context)
+                                                    .push(MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      ForgotPage(),
+                                                ));
+                                              },
+                                              child: Text(
+                                                'Forgot Password?',
+                                                style: TextStyle(
+                                                    color: Color.fromRGBO(
+                                                        60, 65, 133, 1),
+                                                    fontSize: 14),
+                                              ),
                                             ),
                                           ),
-                                          FlatButton(
-                                            onPressed: () {
-                                              Navigator.of(context)
-                                                  .push(MaterialPageRoute(
-                                                builder: (context) =>
-                                                    SignupPage(),
-                                              ));
-                                            },
-                                            child: Text(
-                                              'Sign Up',
-                                              style: TextStyle(
-                                                  color: Color.fromRGBO(
-                                                      60, 65, 133, 1),
-                                                  fontSize: 14),
+                                          Container(
+                                            padding: EdgeInsets.symmetric(
+                                                vertical: height * 0.015),
+                                            child: InkWell(
+                                              onTap: () {
+                                                Navigator.of(context)
+                                                    .push(MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      SignupPage(),
+                                                ));
+                                              },
+                                              child: Text(
+                                                'Sign Up',
+                                                style: TextStyle(
+                                                    color: Color.fromRGBO(
+                                                        60, 65, 133, 1),
+                                                    fontSize: 14),
+                                              ),
                                             ),
                                           ),
                                         ],
                                       ),
                                     ),
-                                    Text('or login with'),
+                                    Container(
+                                      height: 1,
+                                      width: width * 0.3,
+                                      color: Color.fromRGBO(60, 65, 133, 1),
+                                    ),
+                                    Text('\n or login with'),
                                     SizedBox(
                                       width: 20,
                                       height: 15,
