@@ -26,6 +26,7 @@ class ForgotPage extends StatelessWidget {
               Padding(
                   padding: EdgeInsets.symmetric(
                     horizontal: 20,
+                    vertical: height * 0.09,
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -38,15 +39,23 @@ class ForgotPage extends StatelessWidget {
                                 fontSize: 25,
                                 fontWeight: FontWeight.bold)),
                       ),
-                      Text(
-                        'Forgot',
-                        style: TextStyle(
-                          fontSize: 25,
-                          color: Color.fromRGBO(60, 65, 133, 1),
-                          fontWeight: FontWeight.bold
+                      SizedBox(
+                        height: height * 0.1,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(30.0),
+                        child: Text(
+                          'Forgot password?',
+                          style: TextStyle(
+                            fontSize: 25,
+                            color: Color.fromRGBO(60, 65, 133, 1),
+                            fontWeight: FontWeight.bold
+                          ),
                         ),
                       ),
                       Container(
+                        width: width * 0.8,
+                        height: height * 0.065,
                         decoration: BoxDecoration(
                             color: Colors.white,
                             border: Border.all(
@@ -71,8 +80,9 @@ class ForgotPage extends StatelessWidget {
                             decoration: BoxDecoration(
                                 color: Color.fromRGBO(60, 65, 133, 1),
                                 borderRadius: BorderRadius.circular(20)),
-                            width: width * 0.3,
-                            height: height * 0.05,
+                                width: width * 0.3,
+                                margin: EdgeInsets.only(top: 10),
+                                height: height * 0.06,
                             child: FlatButton(
                               onPressed: () {
                                 Navigator.of(context).push(MaterialPageRoute(
@@ -90,7 +100,7 @@ class ForgotPage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               SizedBox(
-                                height: height * 0.35,
+                                height: height * 0.25,
                               ),
                               FlatButton(
                                 onPressed: () {
