@@ -47,10 +47,9 @@ class ForgotPage extends StatelessWidget {
                         child: Text(
                           'Forgot password?',
                           style: TextStyle(
-                            fontSize: 25,
-                            color: Color.fromRGBO(60, 65, 133, 1),
-                            fontWeight: FontWeight.bold
-                          ),
+                              fontSize: 25,
+                              color: Color.fromRGBO(60, 65, 133, 1),
+                              fontWeight: FontWeight.bold),
                         ),
                       ),
                       Container(
@@ -59,9 +58,9 @@ class ForgotPage extends StatelessWidget {
                         decoration: BoxDecoration(
                             color: Colors.white,
                             border: Border.all(
-                                  color: Color.fromRGBO(60, 65, 133, 1),
-                                  width: 1,
-                                ),
+                              color: Color.fromRGBO(60, 65, 133, 1),
+                              width: 1,
+                            ),
                             borderRadius: BorderRadius.circular(20)),
                         padding: EdgeInsets.only(left: width * 0.025),
                         child: TextField(
@@ -69,8 +68,9 @@ class ForgotPage extends StatelessWidget {
                             border: InputBorder.none,
                             hintText:
                                 'Type your email to recover your password',
-                            hintStyle:
-                                TextStyle(color: Color.fromRGBO(60, 65, 133, 0.6), fontSize: 16),
+                            hintStyle: TextStyle(
+                                color: Color.fromRGBO(60, 65, 133, 0.6),
+                                fontSize: 16),
                           ),
                         ),
                       ),
@@ -80,9 +80,9 @@ class ForgotPage extends StatelessWidget {
                             decoration: BoxDecoration(
                                 color: Color.fromRGBO(60, 65, 133, 1),
                                 borderRadius: BorderRadius.circular(20)),
-                                width: width * 0.3,
-                                margin: EdgeInsets.only(top: 10),
-                                height: height * 0.06,
+                            width: width * 0.3,
+                            margin: EdgeInsets.only(top: 10),
+                            height: height * 0.06,
                             child: FlatButton(
                               onPressed: () {
                                 Navigator.of(context).push(MaterialPageRoute(
@@ -111,7 +111,7 @@ class ForgotPage extends StatelessWidget {
                                 child: Text(
                                   'Back to login',
                                   style: TextStyle(
-                                      color: Colors.deepPurple[700],
+                                      color: Color.fromRGBO(60, 65, 133, 1),
                                       fontSize: 20),
                                 ),
                               ),
