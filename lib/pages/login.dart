@@ -30,7 +30,7 @@ class _LoginPageState extends State<LoginPage> {
                 color: Color.fromRGBO(232, 213, 173, 1),
                 border: Border.all(
                   color: Color.fromRGBO(60, 65, 133, 1),
-                  width: 10,
+                  width: width * 0.015,
                 ),
                 // borderRadius: BorderRadius.all(Radius.circular(5)),
               ),
@@ -41,14 +41,14 @@ class _LoginPageState extends State<LoginPage> {
                   Container(
                     child: Padding(
                       padding: EdgeInsets.symmetric(
-                        horizontal: 20,
+                        horizontal: width * 0.05,
                       ),
                       child: Column(
                         children: [
                           Padding(
                             padding: EdgeInsets.only(
-                              top: 55,
-                              left: 10,
+                              top: height * 0.08,
+                              left: width * 0.02,
                             ),
                             child: Align(
                               alignment: Alignment.topLeft,
@@ -70,7 +70,7 @@ class _LoginPageState extends State<LoginPage> {
                               foregroundDecoration: BoxDecoration(
                                 border: Border.all(
                                   color: Colors.black,
-                                  width: 57,
+                                  width: width * 0.13,
                                 ),
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(100)),
@@ -79,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
                                 color: Colors.white,
                                 border: Border.all(
                                   color: Colors.white,
-                                  width: 100,
+                                  width: width * 1,
                                 ),
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(100)),
@@ -88,6 +88,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           Container(
                             width: width * 0.8,
+                            height: height * 0.065,
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 border: Border.all(
@@ -101,16 +102,17 @@ class _LoginPageState extends State<LoginPage> {
                                 border: InputBorder.none,
                                 hintText: 'Email',
                                 hintStyle: TextStyle(
-                                    color: Color.fromRGBO(60, 65, 133, 0.6),
+                                    color: Color.fromRGBO(60, 65, 133, 0.5),
                                     fontSize: 16),
                               ),
                             ),
                           ),
                           SizedBox(
-                            height: 20,
+                            height: height * 0.02,
                           ),
                           Container(
                             width: width * 0.8,
+                            height: height * 0.065,
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 border: Border.all(
@@ -130,8 +132,8 @@ class _LoginPageState extends State<LoginPage> {
                                         ? Icons.visibility_off
                                         : Icons.visibility,
                                     color: isPasswordObscured
-                                        ? Colors.grey
-                                        : Colors.deepPurple[700],
+                                        ? Color.fromRGBO(60, 65, 133, 0.5)
+                                        : Color.fromRGBO(60, 65, 133, 1),
                                   ),
                                   onPressed: () {
                                     setState(() {
@@ -142,20 +144,23 @@ class _LoginPageState extends State<LoginPage> {
                                 border: InputBorder.none,
                                 hintText: 'Password',
                                 hintStyle: TextStyle(
-                                    color: Color.fromRGBO(60, 65, 133, 0.6),
+                                    color: Color.fromRGBO(60, 65, 133, 0.5),
                                     fontSize: 16),
                               ),
                             ),
                           ),
                           Column(
                             children: [
+                              SizedBox(
+                                height: height * 0.01,
+                              ),
                               Container(
                                 decoration: BoxDecoration(
                                     color: Color.fromRGBO(60, 65, 133, 1),
                                     borderRadius: BorderRadius.circular(20)),
                                 width: width * 0.3,
                                 margin: EdgeInsets.only(top: 10),
-                                height: height * 0.05,
+                                height: height * 0.06,
                                 child: FlatButton(
                                   onPressed: () {
                                     Navigator.of(context)
@@ -170,6 +175,9 @@ class _LoginPageState extends State<LoginPage> {
                                         color: Colors.white, fontSize: 14),
                                   ),
                                 ),
+                              ),
+                              SizedBox(
+                                height: height * 0.02,
                               ),
                               Padding(
                                 padding: EdgeInsets.symmetric(
@@ -230,10 +238,13 @@ class _LoginPageState extends State<LoginPage> {
                                       width: width * 0.3,
                                       color: Color.fromRGBO(60, 65, 133, 1),
                                     ),
-                                    Text('\n or login with'),
+                                    Text('\n or login with',
+                                        style: TextStyle(
+                                            color: Color.fromRGBO(
+                                                60, 65, 133, 1))),
                                     SizedBox(
-                                      width: 20,
-                                      height: 15,
+                                      width: width * 0.2,
+                                      height: height * 0.005,
                                     ),
                                     Row(
                                       mainAxisAlignment:

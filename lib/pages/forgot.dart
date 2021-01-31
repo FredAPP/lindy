@@ -13,70 +13,64 @@ class ForgotPage extends StatelessWidget {
           backgroundColor: Colors.grey[50],
           body: Stack(
             children: [
-              Stack(
-                children: [
-                  Container(
-                    height: height,
-                    width: width,
-                    child: Image(
-                      image: AssetImage("assets/images/background.jpeg"),
-                      fit: BoxFit.cover,
+              Container(
+                  width: width,
+                  height: height,
+                  decoration: BoxDecoration(
+                    color: Color.fromRGBO(232, 213, 173, 1),
+                    border: Border.all(
+                      color: Color.fromRGBO(60, 65, 133, 1),
+                      width: width * 0.015,
                     ),
-                  ),
-                  Container(
-                    height: height,
-                    width: width,
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                        stops: [
-                          0.4,
-                          0.8,
-                        ],
-                        colors: [
-                          Color.fromRGBO(210, 193, 144, 0.8),
-                          Color.fromRGBO(200, 173, 112, 0.3),
-                        ],
-                      ),
-                    ),
-                  )
-                ],
-              ),
+                  )),
               Padding(
                   padding: EdgeInsets.symmetric(
                     horizontal: 20,
+                    vertical: height * 0.09,
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Align(
                         alignment: Alignment.topLeft,
-                        child: Text('Let\'s Get you',
+                        child: Text('Let\'s get you back!',
                             style: TextStyle(
-                                color: Colors.deepPurple[700],
+                                color: Color.fromRGBO(60, 65, 133, 1),
                                 fontSize: 25,
                                 fontWeight: FontWeight.bold)),
                       ),
-                      Text(
-                        'Forgot',
-                        style: TextStyle(
-                          fontSize: 25,
-                          color: Colors.deepPurple[700],
+                      SizedBox(
+                        height: height * 0.1,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(30.0),
+                        child: Text(
+                          'Forgot password?',
+                          style: TextStyle(
+                              fontSize: 25,
+                              color: Color.fromRGBO(60, 65, 133, 1),
+                              fontWeight: FontWeight.bold),
                         ),
                       ),
                       Container(
+                        width: width * 0.8,
+                        height: height * 0.065,
                         decoration: BoxDecoration(
                             color: Colors.white,
+                            border: Border.all(
+                              color: Color.fromRGBO(60, 65, 133, 1),
+                              width: 1,
+                            ),
                             borderRadius: BorderRadius.circular(20)),
-                        padding: EdgeInsets.only(left: 15),
+                        padding: EdgeInsets.only(left: width * 0.025),
                         child: TextField(
                           decoration: InputDecoration(
                             border: InputBorder.none,
                             hintText:
                                 'Type your email to recover your password',
-                            hintStyle:
-                                TextStyle(color: Colors.grey, fontSize: 16),
+                            hintStyle: TextStyle(
+                                color: Color.fromRGBO(60, 65, 133, 0.6),
+                                fontSize: 16),
                           ),
                         ),
                       ),
@@ -84,11 +78,11 @@ class ForgotPage extends StatelessWidget {
                         children: [
                           Container(
                             decoration: BoxDecoration(
-                                color: Colors.deepPurple[700],
+                                color: Color.fromRGBO(60, 65, 133, 1),
                                 borderRadius: BorderRadius.circular(20)),
                             width: width * 0.3,
-                            // margin: EdgeInsets.symmetric(vertical: 20),
-                            height: height * 0.05,
+                            margin: EdgeInsets.only(top: 10),
+                            height: height * 0.06,
                             child: FlatButton(
                               onPressed: () {
                                 Navigator.of(context).push(MaterialPageRoute(
@@ -106,7 +100,7 @@ class ForgotPage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               SizedBox(
-                                height: height * 0.35,
+                                height: height * 0.25,
                               ),
                               FlatButton(
                                 onPressed: () {
@@ -115,12 +109,13 @@ class ForgotPage extends StatelessWidget {
                                   ));
                                 },
                                 child: Text(
-                                  'Back to Login',
+                                  'Back to login',
                                   style: TextStyle(
-                                      color: Colors.deepPurple[700],
+                                      color: Color.fromRGBO(60, 65, 133, 1),
                                       fontSize: 20),
                                 ),
                               ),
+                              //Colocar o botão de voltar abaixo do Back to login
                             ],
                           ),
                         ],

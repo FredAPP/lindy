@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:lindyapp/pages/articles_page.dart';
 import 'package:lindyapp/pages/credits_page.dart';
 import 'package:lindyapp/pages/events_page.dart';
 import 'package:lindyapp/pages/home.dart';
