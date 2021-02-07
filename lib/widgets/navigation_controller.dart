@@ -18,10 +18,10 @@ class NavigationController extends StatelessWidget {
 
     List<Widget> _buildScreens() {
       return [
-        Home(),
+        ArticlesPage(),
+        EventsPage(),
         MovesPage(),
         PlaylistsPage(),
-        EventsPage(),
         CreditsPage(),
       ];
     }
@@ -29,34 +29,34 @@ class NavigationController extends StatelessWidget {
     List<PersistentBottomNavBarItem> _navBarsItems() {
       return [
         PersistentBottomNavBarItem(
-          icon: Icon(CupertinoIcons.home),
-          title: ("Home"),
-          activeColor: CupertinoColors.activeBlue,
-          inactiveColor: CupertinoColors.systemGrey,
+          icon: Icon(Icons.library_books_outlined),
+          title: ("Articles"),
+          activeColor: Color.fromRGBO(232, 213, 173, 1),
+          inactiveColor: Color.fromRGBO(232, 213, 173, 0.5),
         ),
         PersistentBottomNavBarItem(
-          icon: Icon(CupertinoIcons.settings),
-          title: ("Settings"),
-          activeColor: CupertinoColors.activeBlue,
-          inactiveColor: CupertinoColors.systemGrey,
+          icon: Icon(Icons.calendar_today),
+          title: ("Events"),
+          activeColor: Color.fromRGBO(232, 213, 173, 1),
+          inactiveColor: Color.fromRGBO(232, 213, 173, 0.5),
         ),
         PersistentBottomNavBarItem(
-          icon: Icon(CupertinoIcons.settings),
-          title: ("Settings"),
-          activeColor: CupertinoColors.activeBlue,
-          inactiveColor: CupertinoColors.systemGrey,
+          icon: Icon(Icons.directions_run),
+          title: ("Moves"),
+          activeColor: Color.fromRGBO(232, 213, 173, 1),
+          inactiveColor: Color.fromRGBO(232, 213, 173, 0.5),
         ),
         PersistentBottomNavBarItem(
-          icon: Icon(CupertinoIcons.settings),
-          title: ("Settings"),
-          activeColor: CupertinoColors.activeBlue,
-          inactiveColor: CupertinoColors.systemGrey,
+          icon: Icon(Icons.playlist_play),
+          title: ("Playlists"),
+          activeColor: Color.fromRGBO(232, 213, 173, 1),
+          inactiveColor: Color.fromRGBO(232, 213, 173, 0.5),
         ),
         PersistentBottomNavBarItem(
-          icon: Icon(CupertinoIcons.settings),
-          title: ("Settings"),
-          activeColor: CupertinoColors.activeBlue,
-          inactiveColor: CupertinoColors.systemGrey,
+          icon: Icon(Icons.info_outline),
+          title: ("Profile"),
+          activeColor: Color.fromRGBO(232, 213, 173, 1),
+          inactiveColor: Color.fromRGBO(232, 213, 173, 0.5),
         ),
       ];
     }
@@ -67,7 +67,7 @@ class NavigationController extends StatelessWidget {
       screens: _buildScreens(),
       items: _navBarsItems(),
       confineInSafeArea: true,
-      backgroundColor: Colors.white,
+      backgroundColor: Color.fromRGBO(60, 65, 133, 1),
       handleAndroidBackButtonPress: true,
       resizeToAvoidBottomInset:
           true, // This needs to be true if you want to move up the screen when keyboard appears.
@@ -75,8 +75,8 @@ class NavigationController extends StatelessWidget {
       hideNavigationBarWhenKeyboardShows:
           true, // Recommended to set 'resizeToAvoidBottomInset' as true while using this argument.
       decoration: NavBarDecoration(
-        borderRadius: BorderRadius.circular(10.0),
-        colorBehindNavBar: Colors.white,
+        borderRadius: BorderRadius.zero,
+        colorBehindNavBar: Color.fromRGBO(60, 65, 133, 0.5),
       ),
       popAllScreensOnTapOfSelectedTab: true,
       popActionScreens: PopActionScreensType.all,

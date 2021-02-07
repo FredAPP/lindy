@@ -11,17 +11,17 @@ class PlaylistsPage extends StatelessWidget {
       body: Row(
         children: [
           Card(
-            child: ListTile(
-              leading: Icon(Icons.music_note),
-              title: Text('Musics'),
-            ),
+            child: Row(children: [
+              Icon(Icons.music_note),
+              Text('Musics'),
+            ]),
           ),
-          Card(
-            child: ListTile(
-              leading: Icon(Icons.movie_filter),
-              title: Text('Performances'),
-            ),
-          ),
+          // Card(
+          //   child: Row(
+          //     Icon(Icons.movie_filter),
+          //     Text('Performances'),
+          //   ),
+          // ),
         ],
       ),
     );
