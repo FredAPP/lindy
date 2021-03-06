@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:lindyapp/pages/articles_page.dart';
 import 'package:lindyapp/pages/credits_page.dart';
 import 'package:lindyapp/pages/events_page.dart';
-import 'package:lindyapp/pages/home.dart';
 import 'package:lindyapp/pages/moves_page.dart';
 import 'package:lindyapp/pages/playlists_page.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
@@ -31,32 +30,32 @@ class NavigationController extends StatelessWidget {
         PersistentBottomNavBarItem(
           icon: Icon(Icons.library_books_outlined),
           title: ("Articles"),
-          activeColor: Color.fromRGBO(232, 213, 173, 1),
-          inactiveColor: Color.fromRGBO(232, 213, 173, 0.5),
+          activeColor: Color.fromRGBO(60, 65, 133, 1),
+          inactiveColor: Color.fromRGBO(60, 65, 133, 0.5),
         ),
         PersistentBottomNavBarItem(
           icon: Icon(Icons.calendar_today),
           title: ("Events"),
-          activeColor: Color.fromRGBO(232, 213, 173, 1),
-          inactiveColor: Color.fromRGBO(232, 213, 173, 0.5),
+          activeColor: Color.fromRGBO(60, 65, 133, 1),
+          inactiveColor: Color.fromRGBO(60, 65, 133, 0.5),
         ),
         PersistentBottomNavBarItem(
           icon: Icon(Icons.directions_run),
           title: ("Moves"),
-          activeColor: Color.fromRGBO(232, 213, 173, 1),
-          inactiveColor: Color.fromRGBO(232, 213, 173, 0.5),
+          activeColor: Color.fromRGBO(60, 65, 133, 1),
+          inactiveColor: Color.fromRGBO(60, 65, 133, 0.5),
         ),
         PersistentBottomNavBarItem(
           icon: Icon(Icons.playlist_play),
           title: ("Playlists"),
-          activeColor: Color.fromRGBO(232, 213, 173, 1),
-          inactiveColor: Color.fromRGBO(232, 213, 173, 0.5),
+          activeColor: Color.fromRGBO(60, 65, 133, 1),
+          inactiveColor: Color.fromRGBO(60, 65, 133, 0.5),
         ),
         PersistentBottomNavBarItem(
           icon: Icon(Icons.info_outline),
           title: ("Profile"),
-          activeColor: Color.fromRGBO(232, 213, 173, 1),
-          inactiveColor: Color.fromRGBO(232, 213, 173, 0.5),
+          activeColor: Color.fromRGBO(60, 65, 133, 1),
+          inactiveColor: Color.fromRGBO(60, 65, 133, 0.5),
         ),
       ];
     }
@@ -67,7 +66,8 @@ class NavigationController extends StatelessWidget {
       screens: _buildScreens(),
       items: _navBarsItems(),
       confineInSafeArea: true,
-      backgroundColor: Color.fromRGBO(60, 65, 133, 1),
+      margin: EdgeInsets.fromLTRB(10, 0, 10, 10),
+      backgroundColor: Color.fromRGBO(232, 213, 173, 1),
       handleAndroidBackButtonPress: true,
       resizeToAvoidBottomInset:
           true, // This needs to be true if you want to move up the screen when keyboard appears.
@@ -75,8 +75,8 @@ class NavigationController extends StatelessWidget {
       hideNavigationBarWhenKeyboardShows:
           true, // Recommended to set 'resizeToAvoidBottomInset' as true while using this argument.
       decoration: NavBarDecoration(
-        borderRadius: BorderRadius.zero,
-        colorBehindNavBar: Color.fromRGBO(60, 65, 133, 0.5),
+        borderRadius: const BorderRadius.all(Radius.circular(5)),
+        colorBehindNavBar: Color.fromRGBO(60, 65, 133, 1),
       ),
       popAllScreensOnTapOfSelectedTab: true,
       popActionScreens: PopActionScreensType.all,
