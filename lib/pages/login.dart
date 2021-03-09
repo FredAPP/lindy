@@ -161,7 +161,7 @@ class _LoginPageState extends State<LoginPage> {
                                 width: width * 0.3,
                                 margin: EdgeInsets.only(top: 10),
                                 height: height * 0.06,
-                                child: FlatButton(
+                                child: TextButton(
                                   onPressed: () {
                                     Navigator.of(context)
                                         .push(MaterialPageRoute(

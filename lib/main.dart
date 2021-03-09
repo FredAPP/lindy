@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, //CHUPA DEBUG
+      debugShowCheckedModeBanner: false,
       home: LoginPage(),
     );
   }

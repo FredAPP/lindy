@@ -12,6 +12,7 @@ class Home extends StatelessWidget {
       child: Scaffold(
         body: Stack(
           children: [
+            AppBar(),
             Stack(
               children: [
                 Container(
@@ -53,7 +54,7 @@ class Home extends StatelessWidget {
                     width: width * 0.6,
                     margin: EdgeInsets.symmetric(vertical: 20),
                     height: height * 0.07,
-                    child: FlatButton(
+                    child: TextButton(
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => DropdownMenu(),
@@ -72,7 +73,7 @@ class Home extends StatelessWidget {
                     width: width * 0.6,
                     margin: EdgeInsets.symmetric(vertical: 20),
                     height: height * 0.07,
-                    child: FlatButton(
+                    child: TextButton(
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => CardVideos(),

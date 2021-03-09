@@ -29,18 +29,18 @@ class ArticlesPage extends StatelessWidget {
               children: <Widget>[
                 Card(
                   child: Padding(
-                    padding: const EdgeInsets.all(15.0),
+                    padding: const EdgeInsets.all(10.0),
                     child: Column(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(14.0),
+                          padding: const EdgeInsets.all(5.0),
                           child: Row(
                             children: [
                               Image(
                                 image:
                                     AssetImage("assets/images/background.jpeg"),
-                                height: height * 0.15,
-                                width: width * 0.30,
+                                height: height * 0.12,
+                                width: width * 0.20,
                                 fit: BoxFit.fitWidth,
                               ),
                               Padding(
@@ -70,7 +70,7 @@ class ArticlesPage extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          "Swing Dance Baby! Swing Dance Baby! Swing Dance Baby! Swing Dance Baby! Swing Dance Baby! Swing Dance Baby! Swing Dance Baby! Swing Dance Baby! Swing Dance Baby! Swing Dance Baby! Swing Dance Baby! Swing Dance Baby! Swing Dance Baby! Swing Dance Baby! ",
+                          "Swing Dance Baby! Swing Dance Baby! Swing Dance Baby! Swing Dance Baby! Swing Dance Baby! Swing Dance Baby! Swing Dance Baby! Swing Dance Baby!",
                           style:
                               TextStyle(color: Color.fromRGBO(60, 65, 133, 1)),
                         ),

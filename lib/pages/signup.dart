@@ -173,7 +173,7 @@ class _SignupPageState extends State<SignupPage> {
                           width: width * 0.3,
                           // margin: EdgeInsets.symmetric(vertical: 20),
                           height: height * 0.05,
-                          child: FlatButton(
+                          child: TextButton(
                             onPressed: () {
                               Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) => LoginPage(),
@@ -236,7 +236,7 @@ class _SignupPageState extends State<SignupPage> {
                               'Do You Have an Account?',
                               style: TextStyle(fontSize: 20),
                             ),
-                            FlatButton(
+                            TextButton(
                               onPressed: () {
                                 Navigator.of(context).push(
                                   MaterialPageRoute(
