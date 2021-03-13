@@ -56,6 +56,10 @@ Widget lindyCard(context) {
   var width = screenSize.width;
   // var heightBody = screenSize.height - 160;
   return Card(
+    margin: EdgeInsets.symmetric(
+      vertical: 10,
+      horizontal: 15,
+    ),
     child: Padding(
       padding: const EdgeInsets.all(10.0),
       child: Column(
@@ -115,6 +119,5 @@ Widget lindyCard(context) {
           width: 1,
         )),
     elevation: 5,
-    margin: EdgeInsets.all(20),
   );
 }

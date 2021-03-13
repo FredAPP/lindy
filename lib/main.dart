@@ -4,7 +4,7 @@ import 'package:lindyapp/pages/login.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarColor: Colors.transparent,
+    statusBarColor: Colors.black,
   ));
   runApp(MyApp());
 }
