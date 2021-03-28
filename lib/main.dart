@@ -18,3 +18,8 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+// TODO Pedro montar firebase
+// TODO montar tela profile (Card com info pessoais: Foto, nome/username, mudar foto)
+// TODO Montar página dos passos (moves)
+// TODO Ter três artigos

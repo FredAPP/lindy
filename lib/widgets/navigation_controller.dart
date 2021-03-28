@@ -18,9 +18,9 @@ class NavigationController extends StatelessWidget {
     List<Widget> _buildScreens() {
       return [
         ArticlesPage(),
-        EventsPage(),
+        // EventsPage(),
         MovesPage(),
-        PlaylistsPage(),
+        // PlaylistsPage(),
         CreditsPage(),
       ];
     }
@@ -33,24 +33,24 @@ class NavigationController extends StatelessWidget {
           activeColor: Color.fromRGBO(60, 65, 133, 1),
           inactiveColor: Color.fromRGBO(60, 65, 133, 0.5),
         ),
-        PersistentBottomNavBarItem(
-          icon: Icon(Icons.calendar_today),
-          title: ("Events"),
-          activeColor: Color.fromRGBO(60, 65, 133, 1),
-          inactiveColor: Color.fromRGBO(60, 65, 133, 0.5),
-        ),
+        // PersistentBottomNavBarItem(
+        //   icon: Icon(Icons.calendar_today),
+        //   title: ("Events"),
+        //   activeColor: Color.fromRGBO(60, 65, 133, 1),
+        //   inactiveColor: Color.fromRGBO(60, 65, 133, 0.5),
+        // ),
         PersistentBottomNavBarItem(
           icon: Icon(Icons.directions_run),
           title: ("Moves"),
           activeColor: Color.fromRGBO(60, 65, 133, 1),
           inactiveColor: Color.fromRGBO(60, 65, 133, 0.5),
         ),
-        PersistentBottomNavBarItem(
-          icon: Icon(Icons.playlist_play),
-          title: ("Playlists"),
-          activeColor: Color.fromRGBO(60, 65, 133, 1),
-          inactiveColor: Color.fromRGBO(60, 65, 133, 0.5),
-        ),
+        // PersistentBottomNavBarItem(
+        //   icon: Icon(Icons.playlist_play),
+        //   title: ("Playlists"),
+        //   activeColor: Color.fromRGBO(60, 65, 133, 1),
+        //   inactiveColor: Color.fromRGBO(60, 65, 133, 0.5),
+        // ),
         PersistentBottomNavBarItem(
           icon: Icon(Icons.info_outline),
           title: ("Profile"),

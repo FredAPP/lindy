@@ -19,11 +19,6 @@ class LindyAppBar extends StatelessWidget {
         ),
       ),
       child: AppBar(
-        leading: Icon(
-          Icons.arrow_back_ios_rounded,
-          color: Color.fromRGBO(60, 65, 133, 1),
-          size: 26,
-        ),
         backgroundColor: Color.fromRGBO(232, 213, 173, 1),
         title: Text(
           "Lindy App",
